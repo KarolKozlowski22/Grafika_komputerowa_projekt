@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <iostream> 
 
 
@@ -11,7 +10,5 @@ int main() {
     return 0;
 
 }   
-=======
 #include <iostream>
 #include <string>
->>>>>>> a2ef1f0ebcebd97ab37208b0bda60fe0c028698a
