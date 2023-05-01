@@ -29,11 +29,15 @@ class GUIMyFrame1 : public MyFrame1
 		virtual void m_button1_click( wxCommandEvent& event );
 		virtual void m_button2_click( wxCommandEvent& event );
 		virtual void m_button3_click( wxCommandEvent& event );
+		void DrawExif(wxDC& dc);
+		void DrawBitmap(wxDC& dc);
 		void Repaint();
     public:
     GUIMyFrame1( wxWindow* parent );
     ~GUIMyFrame1();
 	std::vector<TinyEXIF::EXIFInfo> exif;
+	wxBitmap bitmapexif;
+	wxBitmap bitmapphoto;
 };
 
 

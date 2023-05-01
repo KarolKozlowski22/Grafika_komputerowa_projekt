@@ -11,8 +11,16 @@ void GUIMyFrame1::Repaint() {
     wxBufferedDC bdc2(&dc2);
     bdc1.Clear();
     bdc2.Clear();
-    bdc1.SetBackground(wxBrush(wxColor(0, 0, 0)));
-    bdc2.SetBackground(wxBrush(wxColor(0, 0, 0)));
+    DrawBitmap(bdc1);
+    DrawExif(bdc2);
+}
+
+void GUIMyFrame1::DrawExif(wxDC& dc) {
+    dc.DrawBitmap(bitmapexif, 0, 0, true);
+}
+
+void GUIMyFrame1::DrawBitmap(wxDC& dc) {
+    dc.DrawBitmap(bitmapphoto, 0, 0, true);
 }
 
 void GUIMyFrame1::MainFormClose( wxCloseEvent& event ) { Destroy(); }
@@ -32,7 +40,15 @@ void GUIMyFrame1::m_button1_click( wxCommandEvent& event ) {
             << "Aperture " << imageEXIF.ApertureValue << std::endl
             << "Exposure Time " << imageEXIF.ExposureTime << std::endl
             << "ISO " << imageEXIF.ISOSpeedRatings << std::endl
-            << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl;
+            << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl
+            << "Software " << imageEXIF.Software << std::endl
+            << "Bits Per Sample " << imageEXIF.BitsPerSample << std::endl
+            << "Exposure Bias " << imageEXIF.ExposureBiasValue << std::endl
+            << "Flash " << imageEXIF.Flash << std::endl
+            << "Metering Mode " << imageEXIF.MeteringMode << std::endl
+            << "X Resolution " << imageEXIF.XResolution << std::endl
+            << "Y Resolution " << imageEXIF.YResolution << std::endl
+            << "Orientation " << imageEXIF.Orientation << std::endl;
     else
         std::cout << "No EXIF information in this image." << std::endl;
     file.close();
