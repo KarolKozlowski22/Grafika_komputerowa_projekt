@@ -33,11 +33,14 @@ MyFrame1::MyFrame1( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	bSizer9 = new wxBoxSizer( wxHORIZONTAL );
 
 	m_button1 = new wxButton( this, wxID_ANY, _("Wybierz folder"), wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer9->Add( m_button1, 0, wxALL, 5 );
+	//bSizer9->Add( m_button1, 0, wxALL, 5 );
+
+	bSizer2->Add( m_button1, 1, wxEXPAND, 5 );//
 
 	m_button2 = new wxButton( this, wxID_ANY, _("Zapisz dane exif"), wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer9->Add( m_button2, 0, wxALL, 5 );
+	//bSizer9->Add( m_button2, 0, wxALL, 5 );
 
+	bSizer2->Add( m_button2, 1, wxEXPAND, 5 );//
 
 	bSizer2->Add( bSizer9, 1, wxALIGN_CENTER|wxALL, 5 );
 
@@ -45,16 +48,22 @@ MyFrame1::MyFrame1( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	bSizer91 = new wxBoxSizer( wxHORIZONTAL );
 
 	m_button3 = new wxButton( this, wxID_ANY, _("Wczytaj dane na zdjecie"), wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer91->Add( m_button3, 0, wxALL, 10 );
+	//bSizer91->Add( m_button3, 0, wxALL, 10 );
+
+	bSizer2->Add( m_button3, 1, wxEXPAND, 5 );//
 
 	m_button4 = new wxButton( this, wxID_ANY, _("Powieksz wybrane zdjecie"), wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer91->Add( m_button4, 0, wxALL, 10 );
+	//bSizer91->Add( m_button4, 0, wxALL, 10 );
+
+	bSizer2->Add( m_button4, 1, wxEXPAND, 5 );//
 
 	wxBoxSizer* bSizer92;
 	bSizer92 = new wxBoxSizer( wxHORIZONTAL );
 
 	m_button5 = new wxButton( this, wxID_ANY, _("Wczytaj komentarze na zdjecia"), wxDefaultPosition, wxDefaultSize, 0 );
-	bSizer92->Add( m_button5, 0, wxALL, 10 );
+	//bSizer92->Add( m_button5, 0, wxALL, 10 );
+
+	bSizer2->Add( m_button5, 1, wxEXPAND, 5 );//
 
 	bSizer2->Add( bSizer91, 1, wxEXPAND, 5 );
 
