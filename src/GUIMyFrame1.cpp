@@ -51,7 +51,6 @@ void GUIMyFrame1::DrawBitmap(wxDC& dc) {
         }
     }
     else {
-        //print only the recently added image fullscale of the panel
         wxBitmap bitmap(images.back());
         wxMemoryDC dc1(bitmapphoto);
         dc1.DrawBitmap(bitmap, 0, 0, true);
@@ -104,6 +103,7 @@ void GUIMyFrame1::m_button1_click( wxCommandEvent& event ) {
     file.close();
 
     wxDir dir(WxOpenFileDialog.GetDirectory().mb_str());
+    dire = WxOpenFileDialog.GetDirectory().mb_str();
     if (!dir.IsOpened()) {
         std::cout << "Cannot open the directory!" << std::endl;
         return;
@@ -121,9 +121,87 @@ void GUIMyFrame1::m_button1_click( wxCommandEvent& event ) {
     Repaint();
 }
 
-void GUIMyFrame1::m_button2_click( wxCommandEvent& event ) { Repaint(); }
+void GUIMyFrame1::m_button2_click( wxCommandEvent& event ) { 
+    if (images.size() > 0) {
+        std::ofstream file("exif.txt", std::ios::binary);   
+        std::stringstream ss;
+        wxDir dir(dire);
+        wxString filename;
+        bool cont = dir.GetFirst(&filename, wxEmptyString, wxDIR_FILES);
+        while (cont) {
 
-void GUIMyFrame1::m_button3_click( wxCommandEvent& event ) { Repaint(); }
+            std::ifstream file2((dire + "\\" + filename).mb_str(), std::ios::binary);
+            TinyEXIF::EXIFInfo imageEXIF(file2);
+
+            if (imageEXIF.Fields) {
+                ss << "Image Description " << imageEXIF.ImageDescription << "\n"
+                    << "Image Resolution " << imageEXIF.ImageWidth << "x" << imageEXIF.ImageHeight << " pixels\n"
+                    << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl
+                    << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << "\n"
+                    << "Focal Length " << imageEXIF.FocalLength << " mm" << std::endl
+                    << "Aperture " << imageEXIF.ApertureValue << std::endl
+                    << "Exposure Time " << imageEXIF.ExposureTime << std::endl
+                    << "ISO " << imageEXIF.ISOSpeedRatings << std::endl
+                    << "Software " << imageEXIF.Software << std::endl
+                    << "Bits Per Sample " << imageEXIF.BitsPerSample << std::endl
+                    << "Exposure Bias " << imageEXIF.ExposureBiasValue << std::endl
+                    << "Flash " << imageEXIF.Flash << std::endl
+                    << "Metering Mode " << imageEXIF.MeteringMode << std::endl
+                    << "X Resolution " << imageEXIF.XResolution << std::endl
+                    << "Y Resolution " << imageEXIF.YResolution << std::endl
+                    << "Orientation " << imageEXIF.Orientation << std::endl
+                    << "Exposure Program " << imageEXIF.ExposureProgram << std::endl
+                    << "Light Source " << imageEXIF.LightSource << std::endl
+                    << "GPS Latitude " << imageEXIF.GeoLocation.Latitude << std::endl
+                    << "GPS Longitude " << imageEXIF.GeoLocation.Longitude << std::endl
+                    << "GPS Altitude " << imageEXIF.GeoLocation.Altitude << std::endl;
+            }
+            else
+                ss << "No EXIF information in this image." << std::endl;
+
+            file2.close();
+
+            file << filename.mb_str() << std::endl << ss.str() << std::endl;
+
+            ss.str("");
+            ss.clear();
+            cont = dir.GetNext(&filename);
+        }
+        file.close();
+    }
+}
+
+void GUIMyFrame1::m_button3_click( wxCommandEvent& event ) {
+    if (images.size() > 0) {
+        wxDir dir(dire);
+        wxString filename;
+        bool cont = dir.GetFirst(&filename, wxEmptyString, wxDIR_FILES);
+        while (cont) {
+            std::ifstream file2((dire + "\\" + filename).mb_str(), std::ios::binary);
+            TinyEXIF::EXIFInfo imageEXIF(file2);
+            std::stringstream ss;
+            wxString nazwachanged = filename;
+            nazwachanged.Replace(".jpg", "changed.jpg");
+            if (imageEXIF.Fields) {
+                ss << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl
+                << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << "\n";
+            }
+            else {
+                ss << "No EXIF information in this image." << std::endl;
+            }
+            wxImage image(dire + "\\" + filename, wxBITMAP_TYPE_JPEG);
+            wxBitmap bitmap(image);
+            wxMemoryDC dc(bitmap);
+            dc.SetFont(wxFont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
+            dc.SetTextForeground(*wxWHITE);
+            dc.DrawText(ss.str(), 0, 0);
+            image = bitmap.ConvertToImage();
+            image.SaveFile(savepath + nazwachanged);
+            file2.close();
+            cont = dir.GetNext(&filename);
+        }
+    }
+}
 
 void GUIMyFrame1::m_button4_click( wxCommandEvent& event ) {
     if (images.size() > 0) {
@@ -136,6 +214,39 @@ void GUIMyFrame1::m_button4_click( wxCommandEvent& event ) {
         else {
             exp = false;
             images.pop_back();
+        }
+        Repaint();
+    }
+}
+
+void GUIMyFrame1::m_button5_click( wxCommandEvent& event ) {
+    if (images.size() > 0) {
+        std::ifstream file("loader.txt", std::ios::binary);
+        std::stringstream ss;
+        std::string line;
+        std::string comment;
+        std::string name;
+        wxDir dir(dire);
+        wxString filename;
+        bool cont = dir.GetFirst(&filename, wxEmptyString, wxDIR_FILES);
+        while (cont) {
+            std::getline(file, line);
+            name = line;
+            std::getline(file, line);
+            comment = line;
+            std::getline(file, line);
+            wxImage image(dire + "\\" + filename, wxBITMAP_TYPE_JPEG);
+            wxBitmap bitmap(image);
+            wxMemoryDC dc(bitmap);
+            dc.SetFont(wxFont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
+            dc.SetTextForeground(*wxWHITE);
+            dc.DrawText(name, 0, 0);
+            dc.DrawText(comment, 0, 20);
+            image = bitmap.ConvertToImage();
+            name = name.substr(0, name.size() - 4);
+            name += "comment.jpg";
+            image.SaveFile(savepath + name);
+            cont = dir.GetNext(&filename);
         }
         Repaint();
     }

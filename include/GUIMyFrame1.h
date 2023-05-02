@@ -3,6 +3,8 @@
 #include "TinyEXIF.h"
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <istream>
 #include <vector>
 #include <memory>
 #include <algorithm>
@@ -44,6 +46,7 @@ class GUIMyFrame1 : public MyFrame1
 		virtual void m_button2_click( wxCommandEvent& event );
 		virtual void m_button3_click( wxCommandEvent& event );
 		virtual void m_button4_click( wxCommandEvent& event );
+		virtual void m_button5_click( wxCommandEvent& event );
 		void DrawExif(wxDC& dc);
 		void DrawBitmap(wxDC& dc);
 		void Repaint();
@@ -55,6 +58,8 @@ class GUIMyFrame1 : public MyFrame1
 	std::vector<wxImage> images;
 	wxString s;
 	wxString path;
+	wxString dire;
+	wxString savepath="C:\\Users\\aleks\\Downloads\\kopiefoci\\";
 	bool exp=false;
 };
 
