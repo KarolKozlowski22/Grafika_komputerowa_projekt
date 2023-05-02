@@ -37,6 +37,7 @@ class MyFrame1 : public wxFrame
 		wxButton* m_button1;
 		wxButton* m_button2;
 		wxButton* m_button3;
+		wxButton* m_button4;
 
 		// Virtual event handlers, override them in your derived class
 		virtual void MainFormClose( wxCloseEvent& event ) { event.Skip(); }
@@ -44,6 +45,7 @@ class MyFrame1 : public wxFrame
 		virtual void m_button1_click( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_button2_click( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_button3_click( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_button4_click( wxCommandEvent& event ) { event.Skip(); }
 
 
 	public:

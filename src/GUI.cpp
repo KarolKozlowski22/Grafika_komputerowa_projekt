@@ -47,6 +47,9 @@ MyFrame1::MyFrame1( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_button3 = new wxButton( this, wxID_ANY, _("Wczytaj nazwy"), wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer91->Add( m_button3, 0, wxALL, 10 );
 
+	m_button4 = new wxButton( this, wxID_ANY, _("Powieksz"), wxDefaultPosition, wxDefaultSize, 0 );
+	bSizer91->Add( m_button4, 0, wxALL, 10 );
+
 
 	bSizer2->Add( bSizer91, 1, wxEXPAND, 5 );
 
@@ -66,6 +69,7 @@ MyFrame1::MyFrame1( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_button1->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button1_click ), NULL, this );
 	m_button2->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button2_click ), NULL, this );
 	m_button3->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button3_click ), NULL, this );
+	m_button4->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button4_click ), NULL, this );
 }
 
 MyFrame1::~MyFrame1()
@@ -77,5 +81,5 @@ MyFrame1::~MyFrame1()
 	m_button1->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button1_click ), NULL, this );
 	m_button2->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button2_click ), NULL, this );
 	m_button3->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button3_click ), NULL, this );
-
+	m_button4->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button4_click ), NULL, this );
 }

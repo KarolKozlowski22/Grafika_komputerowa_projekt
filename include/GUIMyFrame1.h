@@ -15,6 +15,20 @@
 #include <wx/dcbuffer.h>
 #include <wx/colourdata.h>
 #include <wx/colordlg.h>
+#include <wx/dir.h>
+#include <wx/msgdlg.h>
+#include <wx/numdlg.h>
+#include <wx/pen.h>
+#include <wx/brush.h>
+#include <wx/font.h>
+#include <wx/image.h>
+#include <wx/bitmap.h>
+#include <wx/dc.h>
+#include <wx/dcgraph.h>
+#include <wx/dcmirror.h>
+#include <wx/dcscreen.h>
+#include <wx/dcsvg.h>
+#include <wx/dcprint.h>
 
 class GUIMyFrame1 : public MyFrame1
 {
@@ -29,15 +43,19 @@ class GUIMyFrame1 : public MyFrame1
 		virtual void m_button1_click( wxCommandEvent& event );
 		virtual void m_button2_click( wxCommandEvent& event );
 		virtual void m_button3_click( wxCommandEvent& event );
+		virtual void m_button4_click( wxCommandEvent& event );
 		void DrawExif(wxDC& dc);
 		void DrawBitmap(wxDC& dc);
 		void Repaint();
     public:
     GUIMyFrame1( wxWindow* parent );
     ~GUIMyFrame1();
-	std::vector<TinyEXIF::EXIFInfo> exif;
 	wxBitmap bitmapexif;
 	wxBitmap bitmapphoto;
+	std::vector<wxImage> images;
+	wxString s;
+	wxString path;
+	bool exp=false;
 };
 
 
