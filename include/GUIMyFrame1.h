@@ -3,6 +3,8 @@
 #include "TinyEXIF.h"
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <istream>
 #include <vector>
 #include <memory>
 #include <algorithm>
@@ -55,6 +57,7 @@ class GUIMyFrame1 : public MyFrame1
 	std::vector<wxImage> images;
 	wxString s;
 	wxString path;
+	wxString dire;
 	bool exp=false;
 };
 
