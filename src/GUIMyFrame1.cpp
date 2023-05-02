@@ -51,7 +51,6 @@ void GUIMyFrame1::DrawBitmap(wxDC& dc) {
         }
     }
     else {
-        //print only the recently added image fullscale of the panel
         wxBitmap bitmap(images.back());
         wxMemoryDC dc1(bitmapphoto);
         dc1.DrawBitmap(bitmap, 0, 0, true);
@@ -123,7 +122,6 @@ void GUIMyFrame1::m_button1_click( wxCommandEvent& event ) {
 }
 
 void GUIMyFrame1::m_button2_click( wxCommandEvent& event ) { 
-    //save image names with their respective exif data
     if (images.size() > 0) {
         std::ofstream file("exif.txt", std::ios::binary);   
         std::stringstream ss;
@@ -174,7 +172,6 @@ void GUIMyFrame1::m_button2_click( wxCommandEvent& event ) {
 }
 
 void GUIMyFrame1::m_button3_click( wxCommandEvent& event ) {
-    //save date taken and camera model onto each image in the directory and save them in the same directory with names "nazwachanged.jpg"
     if (images.size() > 0) {
         wxDir dir(dire);
         wxString filename;
@@ -224,11 +221,6 @@ void GUIMyFrame1::m_button4_click( wxCommandEvent& event ) {
 
 void GUIMyFrame1::m_button5_click( wxCommandEvent& event ) {
     if (images.size() > 0) {
-        //load image names with their respective comment from loader.txt where the structure is 
-        //image name
-        //comment
-        //spacer
-        //then save them in the savepath directory with the comment on the image and name "nazwacomment.jpg"
         std::ifstream file("loader.txt", std::ios::binary);
         std::stringstream ss;
         std::string line;
@@ -238,7 +230,6 @@ void GUIMyFrame1::m_button5_click( wxCommandEvent& event ) {
         wxString filename;
         bool cont = dir.GetFirst(&filename, wxEmptyString, wxDIR_FILES);
         while (cont) {
-            //read line by line, first line is name, second is comment, third is spacer
             std::getline(file, line);
             name = line;
             std::getline(file, line);
