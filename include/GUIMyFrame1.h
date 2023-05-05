@@ -59,7 +59,6 @@ class GUIMyFrame1 : public MyFrame1
 	wxString s;
 	wxString path;
 	wxString dire;
-	wxString savepath="C:\\Users\\aleks\\Downloads\\GrafikaProj\\Grafika_komputerowa_projekt\\kopiefoci\\";
 	bool exp=false;
 };
 

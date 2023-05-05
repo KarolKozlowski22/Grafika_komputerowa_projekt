@@ -196,7 +196,7 @@ void GUIMyFrame1::m_button3_click( wxCommandEvent& event ) {
             dc.SetTextForeground(*wxWHITE);
             dc.DrawText(ss.str(), 0, 0);
             image = bitmap.ConvertToImage();
-            image.SaveFile(savepath + nazwachanged);
+            image.SaveFile(dire + nazwachanged);
             file2.close();
             cont = dir.GetNext(&filename);
         }
@@ -245,7 +245,7 @@ void GUIMyFrame1::m_button5_click( wxCommandEvent& event ) {
             image = bitmap.ConvertToImage();
             name = name.substr(0, name.size() - 4);
             name += "comment.jpg";
-            image.SaveFile(savepath + name);
+            image.SaveFile(dire + name);
             cont = dir.GetNext(&filename);
         }
         Repaint();
