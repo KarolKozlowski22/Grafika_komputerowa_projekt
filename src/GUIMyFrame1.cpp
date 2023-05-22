@@ -1,10 +1,12 @@
 #include "GUIMyFrame1.h"
 
-GUIMyFrame1::GUIMyFrame1( wxWindow* parent ): MyFrame1( parent ){
-    wxInitAllImageHandlers();
-    }
+GUIMyFrame1::GUIMyFrame1( wxWindow* parent ): MyFrame1( parent ){wxInitAllImageHandlers();}
 
 GUIMyFrame1::~GUIMyFrame1() {}
+
+void GUIMyFrame1::MainFormClose( wxCloseEvent& event ) { Destroy(); }
+
+void GUIMyFrame1::WxPanel_Repaint( wxUpdateUIEvent& event ) { Repaint(); }
 
 void GUIMyFrame1::Repaint() {
     wxClientDC dc1(WxPanel);
@@ -58,9 +60,6 @@ void GUIMyFrame1::DrawBitmap(wxDC& dc) {
     dc1.SelectObject(wxNullBitmap);
     dc.DrawBitmap(bitmapphoto, 0, 0, true);
 }
-
-void GUIMyFrame1::MainFormClose( wxCloseEvent& event ) { Destroy(); }
-void GUIMyFrame1::WxPanel_Repaint( wxUpdateUIEvent& event ) { Repaint(); }
 
 void GUIMyFrame1::m_button1_click( wxCommandEvent& event ) {
 
@@ -196,7 +195,7 @@ void GUIMyFrame1::m_button3_click( wxCommandEvent& event ) {
             dc.SetTextForeground(*wxWHITE);
             dc.DrawText(ss.str(), 0, 0);
             image = bitmap.ConvertToImage();
-            image.SaveFile(savepath + nazwachanged);
+            image.SaveFile(dire + nazwachanged);
             file2.close();
             cont = dir.GetNext(&filename);
         }
@@ -204,22 +203,6 @@ void GUIMyFrame1::m_button3_click( wxCommandEvent& event ) {
 }
 
 void GUIMyFrame1::m_button4_click( wxCommandEvent& event ) {
-    if (images.size() > 0) {
-        if (exp == false) {
-            exp = true;
-            wxImage image(path, wxBITMAP_TYPE_JPEG);
-            image.Rescale(this->WxPanel->GetSize().GetWidth(), this->WxPanel->GetSize().GetHeight());
-            images.push_back(image);
-        }
-        else {
-            exp = false;
-            images.pop_back();
-        }
-        Repaint();
-    }
-}
-
-void GUIMyFrame1::m_button5_click( wxCommandEvent& event ) {
     if (images.size() > 0) {
         std::ifstream file("loader.txt", std::ios::binary);
         std::stringstream ss;
@@ -245,8 +228,30 @@ void GUIMyFrame1::m_button5_click( wxCommandEvent& event ) {
             image = bitmap.ConvertToImage();
             name = name.substr(0, name.size() - 4);
             name += "comment.jpg";
-            image.SaveFile(savepath + name);
+            image.SaveFile(dire + name);
             cont = dir.GetNext(&filename);
+        }
+        Repaint();
+    }
+}
+
+void GUIMyFrame1::m_panel_2lclick( wxMouseEvent& event ) {
+    if (images.size() > 0) {
+        if (exp == false) {
+            exp = true;
+            wxImage image(path, wxBITMAP_TYPE_JPEG);
+            image.Rescale(this->WxPanel->GetSize().GetWidth(), this->WxPanel->GetSize().GetHeight());
+            images.push_back(image);
+        }
+        Repaint();
+    }
+}
+
+void GUIMyFrame1::m_panel_1lclick( wxMouseEvent& event ) {
+    if (images.size() > 0) {
+        if (exp == true) {
+            exp = false;
+            images.pop_back();
         }
         Repaint();
     }

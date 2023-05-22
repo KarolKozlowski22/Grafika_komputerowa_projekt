@@ -52,18 +52,13 @@ MyFrame1::MyFrame1( wxWindow* parent, wxWindowID id, const wxString& title, cons
 
 	bSizer2->Add( m_button3, 1, wxEXPAND, 5 );//
 
-	m_button4 = new wxButton( this, wxID_ANY, _("Powieksz wybrane zdjecie"), wxDefaultPosition, wxDefaultSize, 0 );
-	//bSizer91->Add( m_button4, 0, wxALL, 10 );
-
-	bSizer2->Add( m_button4, 1, wxEXPAND, 5 );//
-
 	wxBoxSizer* bSizer92;
 	bSizer92 = new wxBoxSizer( wxHORIZONTAL );
 
-	m_button5 = new wxButton( this, wxID_ANY, _("Wczytaj komentarze na zdjecia"), wxDefaultPosition, wxDefaultSize, 0 );
-	//bSizer92->Add( m_button5, 0, wxALL, 10 );
+	m_button4 = new wxButton( this, wxID_ANY, _("Wczytaj komentarze na zdjecia"), wxDefaultPosition, wxDefaultSize, 0 );
+	//bSizer92->Add( m_button4, 0, wxALL, 10 );
 
-	bSizer2->Add( m_button5, 1, wxEXPAND, 5 );//
+	bSizer2->Add( m_button4, 1, wxEXPAND, 5 );//
 
 	bSizer2->Add( bSizer91, 1, wxEXPAND, 5 );
 
@@ -85,7 +80,8 @@ MyFrame1::MyFrame1( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_button2->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button2_click ), NULL, this );
 	m_button3->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button3_click ), NULL, this );
 	m_button4->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button4_click ), NULL, this );
-	m_button5->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button5_click ), NULL, this );
+	WxPanel->Connect( wxEVT_LEFT_DCLICK, wxMouseEventHandler( MyFrame1::m_panel_2lclick ), NULL, this );
+	WxPanel->Connect( wxEVT_LEFT_DOWN, wxMouseEventHandler( MyFrame1::m_panel_1lclick ), NULL, this );
 }
 
 MyFrame1::~MyFrame1()
@@ -98,5 +94,6 @@ MyFrame1::~MyFrame1()
 	m_button2->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button2_click ), NULL, this );
 	m_button3->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button3_click ), NULL, this );
 	m_button4->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button4_click ), NULL, this );
-	m_button5->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MyFrame1::m_button5_click ), NULL, this );
+	WxPanel->Disconnect( wxEVT_LEFT_DCLICK, wxMouseEventHandler( MyFrame1::m_panel_2lclick ), NULL, this );
+	WxPanel->Disconnect( wxEVT_LEFT_DOWN, wxMouseEventHandler( MyFrame1::m_panel_1lclick ), NULL, this );
 }
