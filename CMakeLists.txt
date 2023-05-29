@@ -32,6 +32,5 @@ include(${wxWidgets_USE_FILE})
 file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
 add_executable(${PROJECT_NAME} ${PROJECT_NAME}.cpp ${SOURCES})
-#target_link_options(${PROJECT_NAME} PUBLIC -lsfml-system -lsfml-graphics -lsfml-window)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${wxWidgets_LIBRARIES})
 

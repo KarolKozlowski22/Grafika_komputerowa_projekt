@@ -31,9 +31,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 class MyFrame1 : public wxFrame
 {
-	private:
-
 	protected:
+		wxPanel* WxPanel;
+		wxPanel* WxPanel1;
 		wxButton* m_button1;
 		wxButton* m_button2;
 		wxButton* m_button3;
@@ -49,12 +49,9 @@ class MyFrame1 : public wxFrame
 		virtual void m_panel_2lclick( wxMouseEvent& event ) { event.Skip(); }
 		virtual void m_panel_1lclick( wxMouseEvent& event ) { event.Skip(); }
 
-
 	public:
-		wxPanel* WxPanel;
-		wxPanel* WxPanel1;
 
-		MyFrame1( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Napisy na zdjeciach"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 777,547 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		MyFrame1( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Napisy na zdjeciach"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 700,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~MyFrame1();
 
