@@ -3,37 +3,23 @@
 #include "TinyEXIF.h"
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <istream>
 #include <vector>
-#include <memory>
-#include <algorithm>
-#include <cmath>
-#include <string>
 #include <sstream>
 #include <wx/filedlg.h>
-#include <wx/dcmemory.h>
-#include <wx/dcclient.h>
 #include <wx/dcbuffer.h>
-#include <wx/colourdata.h>
-#include <wx/colordlg.h>
 #include <wx/dir.h>
-#include <wx/msgdlg.h>
-#include <wx/numdlg.h>
-#include <wx/pen.h>
-#include <wx/brush.h>
-#include <wx/font.h>
-#include <wx/image.h>
-#include <wx/bitmap.h>
-#include <wx/dc.h>
-#include <wx/dcgraph.h>
-#include <wx/dcmirror.h>
-#include <wx/dcscreen.h>
-#include <wx/dcsvg.h>
-#include <wx/dcprint.h>
 
 class GUIMyFrame1 : public MyFrame1
 {
+	// wxBitmap variables hold the image and the exif data
+	wxBitmap bitmapexif,bitmapphoto;
+	// vector holds the exif data
+	std::vector<wxImage> images;
+	// s holds exif data, path holds the path to the image, dire holds the path to the directory
+	wxString s,path,dire;
+	// bool variable checks if the image is full screen
+	bool exp=false;
+	
 	protected:
 		// void method destroys all the objects in the vector
 		void MainFormClose( wxCloseEvent& event );
@@ -62,11 +48,6 @@ class GUIMyFrame1 : public MyFrame1
 
     	GUIMyFrame1( wxWindow* parent );
     	~GUIMyFrame1();
-
-		wxBitmap bitmapexif,bitmapphoto;
-		std::vector<wxImage> images;
-		wxString s,path,dire;
-		bool exp=false;
 };
 
 

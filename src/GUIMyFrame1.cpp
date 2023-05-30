@@ -73,10 +73,10 @@ void GUIMyFrame1::m_button1_click( wxCommandEvent& event ) {
 
     std::stringstream ss;
     if (imageEXIF.Fields) {
-    ss << "Image Description " << imageEXIF.ImageDescription << "\n"
-        << "Image Resolution " << imageEXIF.ImageWidth << "x" << imageEXIF.ImageHeight << " pixels\n"
+    ss << "Image Description " << imageEXIF.ImageDescription << std::endl
+        << "Image Resolution " << imageEXIF.ImageWidth << "x" << imageEXIF.ImageHeight << " pixels" << std::endl
         << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl
-        << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << "\n"
+        << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << std::endl
         << "Focal Length " << imageEXIF.FocalLength << " mm" << std::endl
         << "Aperture " << imageEXIF.ApertureValue << std::endl
         << "Exposure Time " << imageEXIF.ExposureTime << std::endl
@@ -133,10 +133,10 @@ void GUIMyFrame1::m_button2_click( wxCommandEvent& event ) {
             TinyEXIF::EXIFInfo imageEXIF(file2);
 
             if (imageEXIF.Fields) {
-                ss << "Image Description " << imageEXIF.ImageDescription << "\n"
-                    << "Image Resolution " << imageEXIF.ImageWidth << "x" << imageEXIF.ImageHeight << " pixels\n"
+                ss << "Image Description " << imageEXIF.ImageDescription << std::endl
+                    << "Image Resolution " << imageEXIF.ImageWidth << "x" << imageEXIF.ImageHeight << " pixels" << std::endl
                     << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl
-                    << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << "\n"
+                    << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << std::endl
                     << "Focal Length " << imageEXIF.FocalLength << " mm" << std::endl
                     << "Aperture " << imageEXIF.ApertureValue << std::endl
                     << "Exposure Time " << imageEXIF.ExposureTime << std::endl
