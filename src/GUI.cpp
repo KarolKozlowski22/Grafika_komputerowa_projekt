@@ -42,7 +42,7 @@ MyFrame1::MyFrame1( wxWindow* parent, wxWindowID id, const wxString& title, cons
 
 	bSizer2->Add( bSizer3, 1, wxALIGN_CENTER|wxALL, 5 );
 
-	m_button3 = new wxButton( this, wxID_ANY, _("Wczytaj dane na zdjecie"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_button3 = new wxButton( this, wxID_ANY, _("Wczytaj dane exif na zdjecie"), wxDefaultPosition, wxDefaultSize, 0 );
 
 	bSizer2->Add( m_button3, 1, wxEXPAND, 5 );
 
