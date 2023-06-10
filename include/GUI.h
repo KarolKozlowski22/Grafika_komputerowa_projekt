@@ -1,34 +1,12 @@
-///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version 3.10.1-282-g1fa54006)
-// http://www.wxformbuilder.org/
-//
-// PLEASE DO *NOT* EDIT THIS FILE!
-///////////////////////////////////////////////////////////////////////////
-
 #pragma once
-
-#include <wx/artprov.h>
-#include <wx/xrc/xmlres.h>
-#include <wx/intl.h>
 #include <wx/panel.h>
-#include <wx/gdicmn.h>
-#include <wx/font.h>
-#include <wx/colour.h>
-#include <wx/settings.h>
 #include <wx/string.h>
 #include <wx/button.h>
 #include <wx/bitmap.h>
 #include <wx/image.h>
-#include <wx/icon.h>
 #include <wx/sizer.h>
 #include <wx/frame.h>
 
-///////////////////////////////////////////////////////////////////////////
-
-
-///////////////////////////////////////////////////////////////////////////////
-/// Class MyFrame1
-///////////////////////////////////////////////////////////////////////////////
 class MyFrame1 : public wxFrame
 {
 	protected:
@@ -50,10 +28,6 @@ class MyFrame1 : public wxFrame
 		virtual void m_panel_1lclick( wxMouseEvent& event ) { event.Skip(); }
 
 	public:
-
 		MyFrame1( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Napisy na zdjeciach"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 700,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
-
 		~MyFrame1();
-
 };
-

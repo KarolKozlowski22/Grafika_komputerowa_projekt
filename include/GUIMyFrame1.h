@@ -3,9 +3,8 @@
 #include "TinyEXIF.h"
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <sstream>
-#include <wx/filedlg.h>
+#include <vector>
 #include <wx/dcbuffer.h>
 #include <wx/dir.h>
 #include <wx/dirdlg.h>
@@ -16,7 +15,7 @@ class GUIMyFrame1 : public MyFrame1
 	wxBitmap bitmapexif,bitmapphoto;
 	// vector holds the exif data
 	std::vector<wxImage> images;
-	// s holds exif data, path holds the path to the image, dire holds the path to the directory
+	// s holds exif data, dire holds the path to the directory
 	wxString s,dire;
 	// path holds the path to the image
 	std::vector<wxString> path;
@@ -50,9 +49,6 @@ class GUIMyFrame1 : public MyFrame1
 		void AddExif(wxString & filename);
 
     public:
-
     	GUIMyFrame1( wxWindow* parent );
     	~GUIMyFrame1();
 };
-
-
