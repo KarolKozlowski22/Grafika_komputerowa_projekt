@@ -8,6 +8,7 @@
 #include <wx/filedlg.h>
 #include <wx/dcbuffer.h>
 #include <wx/dir.h>
+#include <wx/dirdlg.h>
 
 class GUIMyFrame1 : public MyFrame1
 {
@@ -16,7 +17,9 @@ class GUIMyFrame1 : public MyFrame1
 	// vector holds the exif data
 	std::vector<wxImage> images;
 	// s holds exif data, path holds the path to the image, dire holds the path to the directory
-	wxString s,path,dire;
+	wxString s,dire;
+	// path holds the path to the image
+	std::vector<wxString> path;
 	// bool variable checks if the image is full screen
 	bool exp=false;
 	
@@ -43,6 +46,8 @@ class GUIMyFrame1 : public MyFrame1
 		void DrawBitmap(wxDC& dc);
 		// void method repaints
 		void Repaint();
+		// void method adds exif data
+		void AddExif(wxString & filename);
 
     public:
 

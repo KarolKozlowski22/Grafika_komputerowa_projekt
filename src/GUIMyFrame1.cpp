@@ -61,58 +61,25 @@ void GUIMyFrame1::DrawBitmap(wxDC& dc) {
     dc.DrawBitmap(bitmapphoto, 0, 0, true);
 }
 
+
 void GUIMyFrame1::m_button1_click( wxCommandEvent& event ) {
 
     images.clear();
-    wxFileDialog WxOpenFileDialog(this, _("Choose a file"), _(""), _(""), _("jpg files (*.jpg)|*.jpg"), wxFD_OPEN);
+    wxDirDialog dir_path(this,"Choose directory", "", wxDD_DEFAULT_STYLE | wxDD_DIR_MUST_EXIST);
+    dir_path.ShowModal();
     
-    WxOpenFileDialog.ShowModal();
-    std::ifstream file(WxOpenFileDialog.GetPath().mb_str(), std::ios::binary);
-    TinyEXIF::EXIFInfo imageEXIF(file);  
-    file.close();
-
-    std::stringstream ss;
-    if (imageEXIF.Fields) {
-    ss << "Image Description " << imageEXIF.ImageDescription << std::endl
-        << "Image Resolution " << imageEXIF.ImageWidth << "x" << imageEXIF.ImageHeight << " pixels" << std::endl
-        << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl
-        << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << std::endl
-        << "Focal Length " << imageEXIF.FocalLength << " mm" << std::endl
-        << "Aperture " << imageEXIF.ApertureValue << std::endl
-        << "Exposure Time " << imageEXIF.ExposureTime << std::endl
-        << "ISO " << imageEXIF.ISOSpeedRatings << std::endl
-        << "Software " << imageEXIF.Software << std::endl
-        << "Bits Per Sample " << imageEXIF.BitsPerSample << std::endl
-        << "Exposure Bias " << imageEXIF.ExposureBiasValue << std::endl
-        << "Flash " << imageEXIF.Flash << std::endl
-        << "Metering Mode " << imageEXIF.MeteringMode << std::endl
-        << "X Resolution " << imageEXIF.XResolution << std::endl
-        << "Y Resolution " << imageEXIF.YResolution << std::endl
-        << "Orientation " << imageEXIF.Orientation << std::endl
-        << "Exposure Program " << imageEXIF.ExposureProgram << std::endl
-        << "Light Source " << imageEXIF.LightSource << std::endl
-        << "GPS Latitude " << imageEXIF.GeoLocation.Latitude << std::endl
-        << "GPS Longitude " << imageEXIF.GeoLocation.Longitude << std::endl
-        << "GPS Altitude " << imageEXIF.GeoLocation.Altitude << std::endl;
-    }
-    else
-        ss << "No EXIF information in this image." << std::endl;
-    s = wxString(ss.str());
-
-    file.close();
-
-    wxDir dir(WxOpenFileDialog.GetDirectory().mb_str());
-    dire = WxOpenFileDialog.GetDirectory().mb_str();
+    wxDir dir(dir_path.GetPath().mb_str());
+    dire = dir_path.GetPath().mb_str();
     if (!dir.IsOpened()) {
         std::cout << "Cannot open the directory!" << std::endl;
         return;
     }
     wxString filename;
     bool cont = dir.GetFirst(&filename, wxEmptyString, wxDIR_FILES);
-    path =WxOpenFileDialog.GetPath().mb_str();
 
     while (cont) {
-        wxImage image(WxOpenFileDialog.GetDirectory() + "\\" + filename,wxBITMAP_TYPE_JPEG);
+        wxImage image(dir_path.GetPath() + "\\" + filename,wxBITMAP_TYPE_JPEG);
+        path.push_back(dir_path.GetPath() + "\\" + filename);
         image.Rescale(100,100);
         images.push_back(image);
         cont = dir.GetNext(&filename);
@@ -239,11 +206,25 @@ void GUIMyFrame1::m_panel_2lclick( wxMouseEvent& event ) {
     if (images.size() > 0) {
         if (exp == false) {
             exp = true;
-            wxImage image(path, wxBITMAP_TYPE_JPEG);
+            wxPoint pos=event.GetPosition();
+            size_t final_index=0;
+            int x_coord=pos.x/100;
+            int y_coord=pos.y/100;
+            for(unsigned i=0;i<=this->WxPanel->GetSize().GetWidth()/100;i++){
+                for(unsigned j=0;j<=this->WxPanel->GetSize().GetHeight()/100;j++){
+                    if(i==x_coord && j==y_coord){
+                        final_index=i+j*(this->WxPanel->GetSize().GetWidth()/100);
+                    }
+                }
+            }
+           
+            wxImage image(path[final_index], wxBITMAP_TYPE_JPEG);
             image.Rescale(this->WxPanel->GetSize().GetWidth(), this->WxPanel->GetSize().GetHeight());
             images.push_back(image);
+            AddExif(path[final_index]);
         }
         Repaint();
+        
     }
 }
 
@@ -256,3 +237,35 @@ void GUIMyFrame1::m_panel_1lclick( wxMouseEvent& event ) {
         Repaint();
     }
 }
+
+void GUIMyFrame1::AddExif(wxString & filename){
+    std::ifstream file2(filename.mb_str(), std::ios::binary);
+    std::stringstream ss;
+    TinyEXIF::EXIFInfo imageEXIF(file2);
+    if (imageEXIF.Fields) {
+        ss << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl
+        << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << std::endl
+        << "Focal Length " << imageEXIF.FocalLength << " mm" << std::endl
+        << "Aperture " << imageEXIF.ApertureValue << std::endl
+        << "Exposure Time " << imageEXIF.ExposureTime << std::endl
+        << "ISO " << imageEXIF.ISOSpeedRatings << std::endl
+        << "Software " << imageEXIF.Software << std::endl
+        << "Bits Per Sample " << imageEXIF.BitsPerSample << std::endl
+        << "Exposure Bias " << imageEXIF.ExposureBiasValue << std::endl
+        << "Flash " << imageEXIF.Flash << std::endl
+        << "Metering Mode " << imageEXIF.MeteringMode << std::endl
+        << "X Resolution " << imageEXIF.XResolution << std::endl
+        << "Y Resolution " << imageEXIF.YResolution << std::endl
+        << "Orientation " << imageEXIF.Orientation << std::endl
+        << "Exposure Program " << imageEXIF.ExposureProgram << std::endl
+        << "Light Source " << imageEXIF.LightSource << std::endl
+        << "GPS Latitude " << imageEXIF.GeoLocation.Latitude << std::endl
+        << "GPS Longitude " << imageEXIF.GeoLocation.Longitude << std::endl
+        << "GPS Altitude " << imageEXIF.GeoLocation.Altitude << std::endl;
+    }
+    else
+        ss << "No EXIF information in this image." << std::endl;
+    file2.close();
+    s=wxString(ss.str());
+}
+
