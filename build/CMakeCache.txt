@@ -392,6 +392,9 @@ WX_zlib:FILEPATH=WX_zlib-NOTFOUND
 //Cleared.
 WX_zlibd:FILEPATH=C:/wxWidgets-3.2.2.1/lib/gcc_lib/libwxzlibd.a
 
+//The directory containing a CMake configuration file for exiv2.
+exiv2_DIR:PATH=exiv2_DIR-NOTFOUND
+
 //Value Computed by CMake
 main_BINARY_DIR:STATIC=C:/Users/PC/Desktop/Grafika_komputerowa_projekt/build
 

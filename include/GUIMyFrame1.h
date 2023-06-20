@@ -2,6 +2,7 @@
 #include "GUI.h"
 #include "TinyEXIF.h"
 #include <iostream>
+#include <string>
 #include <fstream>
 #include <vector>
 #include <sstream>
@@ -10,13 +11,15 @@
 #include <wx/dir.h>
 #include <wx/dirdlg.h>
 
+
+
 class GUIMyFrame1 : public MyFrame1
 {
 	// wxBitmap variables hold the image and the exif data
 	wxBitmap bitmapexif,bitmapphoto;
 	// vector holds the exif data
 	std::vector<wxImage> images;
-	// s holds exif data, path holds the path to the image, dire holds the path to the directory
+	// s holds exif and iptc data, path holds the path to the image, dire holds the path to the directory
 	wxString s,dire;
 	// path holds the path to the image
 	std::vector<wxString> path;
@@ -41,13 +44,13 @@ class GUIMyFrame1 : public MyFrame1
 		// void method makes image back to normal size
 		void m_panel_1lclick( wxMouseEvent& event );
 		// void method draws the exif data
-		void DrawExif(wxDC& dc);
+		void DrawExifAndIptc(wxDC& dc);
 		// void method draws the image
 		void DrawBitmap(wxDC& dc);
 		// void method repaints
 		void Repaint();
 		// void method adds exif data
-		void AddExif(wxString & filename);
+		void AddExifAndIptc(wxString & filename);
 
     public:
 
