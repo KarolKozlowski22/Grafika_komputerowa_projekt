@@ -1,7 +1,14 @@
-# Grafika_komputerowa_projekt
+Hi,
+This is my project for my Computer Graphics class at AGH. It envolved creating an exif and iptc info photo reader.
 
-To-do-list:
+Its functionalities include:
+Saving all exif data from chosen photo library to a single file
+Creating new photos with its most important data or user-defined comments embedded onto the image on the top left side.
+Easily showing all relevant information about the image.
 
-1. Dodać IPTC info (najlepiej biblioteka TINY).
-2. Zdjęcia powinny się zmieniać przez dwukliknięcie na nie a nie za każdym razem wybieranie z katalogu.
-3. Stworzyć dokumentację.
+Usage:
+After opening the aplication, you have to choose the folder from which the photos will be read. It is done by the top button in the GUI.
+When all images show on the screen, you can double-click on any one of them to show their information.
+Functions like saving data to file and creating new images all have their seperate buttons in the GUI.
+
+Hope you find it useful, thank you!
