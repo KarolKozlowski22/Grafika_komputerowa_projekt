@@ -214,6 +214,7 @@ void GUIMyFrame1::m_panel_2lclick( wxMouseEvent& event ) {
                 for(unsigned j=0;j<=this->WxPanel->GetSize().GetHeight()/100;j++){
                     if(i==x_coord && j==y_coord){
                         final_index=i+j*(this->WxPanel->GetSize().GetWidth()/100);
+                        break;
                     }
                 }
             }
@@ -269,19 +270,42 @@ void GUIMyFrame1::AddExifAndIptc(wxString & filename){
     else
         ss << "No EXIF information in this image." << std::endl;
     file2.close();
+    std::string str = "Caught";
+    int count=0;
     std::ifstream file3("iptcinfo.txt");
     if(file3.is_open()){
-        ss << "IPTC metadata" << "\n";
+        int x=0;
         std::string line;
         while(std::getline(file3,line)){
-            for(unsigned i=18;i<40;i++){
-                ss << line[i];
+
+            for(unsigned i=0;i<str.length();i++){
+
+                if (str[i]!=line[i]){
+                    count=1;
+                    break;
+                }
             }
-            for(unsigned i=67;i<line.length();i++){
-                ss << line[i];
+            if(count==0){
+                ss << "No IPTC metada found in the picture\n";
+                break;
             }
-            ss << "\n";
+            else{
+                if(x==0){
+                    ss << "IPTC metadata" << "\n";
+                    x=1;
+                }
+                
+                for(unsigned i=18;i<40;i++){
+                    ss << line[i];
+                }
+                for(unsigned i=67;i<line.length();i++){
+                    ss << line[i];
+                }
+                    ss << "\n";   
+            }
+            
         }
+           
     }
     else
         ss << "Cannot open file" << "\n";

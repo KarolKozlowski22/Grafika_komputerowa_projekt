@@ -113,29 +113,6 @@ GPS Latitude -25.9254
 GPS Longitude 153.01
 GPS Altitude -42.8
 
-down-mirrored.jpg
-Image Description 
-Image Resolution 0x0 pixels
-Date Taken 
-Camera Model  - 
-Focal Length 0 mm
-Aperture 0
-Exposure Time 0
-ISO 0
-Software 
-Bits Per Sample 0
-Exposure Bias 0
-Flash 0
-Metering Mode 0
-X Resolution 28
-Y Resolution 28
-Orientation 4
-Exposure Program 0
-Light Source 0
-GPS Latitude 1.79769e+308
-GPS Longitude 1.79769e+308
-GPS Altitude 1.79769e+308
-
 evil1.jpg
 Image Description 
 Image Resolution 400x300 pixels
@@ -153,6 +130,29 @@ Metering Mode 5
 X Resolution 180
 Y Resolution 180
 Orientation 1
+Exposure Program 0
+Light Source 0
+GPS Latitude 1.79769e+308
+GPS Longitude 1.79769e+308
+GPS Altitude 1.79769e+308
+
+iptc.jpg
+Image Description The railways of the S45 line are running very close to a small street with parking cars
+Image Resolution 0x0 pixels
+Date Taken 
+Camera Model  - 
+Focal Length 0 mm
+Aperture 0
+Exposure Time 0
+ISO 0
+Software 
+Bits Per Sample 0
+Exposure Bias 0
+Flash 0
+Metering Mode 0
+X Resolution 72
+Y Resolution 72
+Orientation 0
 Exposure Program 0
 Light Source 0
 GPS Latitude 1.79769e+308
