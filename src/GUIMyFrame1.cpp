@@ -95,10 +95,11 @@ void GUIMyFrame1::m_button2_click( wxCommandEvent& event ) {
         wxString filename;
         bool cont = dir.GetFirst(&filename, wxEmptyString, wxDIR_FILES);
         while (cont) {
-
+            std::string command = "iptcprint.exe " + std::string((dire + "\\" + filename).ToUTF8().data()) + " >> iptc.txt";
+            //std::cout << command;
+            system(command.c_str());
             std::ifstream file2((dire + "\\" + filename).mb_str(), std::ios::binary);
             TinyEXIF::EXIFInfo imageEXIF(file2);
-
             if (imageEXIF.Fields) {
                 ss << "Image Description " << imageEXIF.ImageDescription << std::endl
                     << "Image Resolution " << imageEXIF.ImageWidth << "x" << imageEXIF.ImageHeight << " pixels" << std::endl
@@ -123,7 +124,7 @@ void GUIMyFrame1::m_button2_click( wxCommandEvent& event ) {
                     << "GPS Altitude " << imageEXIF.GeoLocation.Altitude << std::endl;
             }
             else
-                ss << "No EXIF information in this image." << std::endl;
+                ss << "No EXIF and IPTC information in this image." << std::endl;
 
             file2.close();
 

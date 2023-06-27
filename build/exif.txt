@@ -183,5 +183,5 @@ GPS Longitude 1.79769e+308
 GPS Altitude 1.79769e+308
 
 ok.jpg
-No EXIF information in this image.
+No EXIF and IPTC information in this image.
 

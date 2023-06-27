@@ -1,0 +1,34 @@
+Caught Exiv2 exception 'C:\Users\PC\Desktop\Grafika_komputerowa_projekt\focie\20160108-162501.jpg: No IPTC data found in the file'
+Caught Exiv2 exception 'C:\Users\PC\Desktop\Grafika_komputerowa_projekt\focie\Bebop_2.jpg: No IPTC data found in the file'
+Caught Exiv2 exception 'C:\Users\PC\Desktop\Grafika_komputerowa_projekt\focie\Bebop_2_1.jpg: No IPTC data found in the file'
+Caught Exiv2 exception 'C:\Users\PC\Desktop\Grafika_komputerowa_projekt\focie\calib.jpg: No IPTC data found in the file'
+Caught Exiv2 exception 'C:\Users\PC\Desktop\Grafika_komputerowa_projekt\focie\crosa.jpg: No IPTC data found in the file'
+Caught Exiv2 exception 'C:\Users\PC\Desktop\Grafika_komputerowa_projekt\focie\evil1.jpg: No IPTC data found in the file'
+Iptc.Application2.SpecialInstructions        0x0028 String     48  This photo is for metadata testing purposes only
+Iptc.Application2.DateCreated                0x0037 Date        8  2020-01-08
+Iptc.Application2.TimeCreated                0x003c Time       11  13:30:01+01:00
+Iptc.Application2.Byline                     0x0050 String     13  Jane Photosty
+Iptc.Application2.Headline                   0x0069 String     24  The railway and the cars
+Iptc.Application2.Credit                     0x006e String     18  IPTC/Jane Photosty
+Iptc.Application2.Copyright                  0x0074 String     50  © Copyright 2020 IPTC (Test Images) - www.iptc.org
+Iptc.Application2.Caption                    0x0078 String     87  The railways of the S45 line are running very close to a small street with parking cars
+Iptc.Application2.RecordVersion              0x0000 Short       1  4
+Iptc.Application2.RecordVersion              0x0000 Short       1  2
+Iptc.Application2.Caption                    0x0078 String     31  IPTC CONTENT PANEL: DESCRIPTION
+Iptc.Application2.Writer                     0x007a String     32  IPTC CONTENT PANEL: DESCRIPTION 
+Iptc.Application2.Headline                   0x0069 String     20  IPTC CONTENT PANEL: 
+Iptc.Application2.SpecialInstructions        0x0028 String     31  IPTC STATUS PANEL: INSTRUCTIONS
+Iptc.Application2.Byline                     0x0050 String     27  IPTC CONTACT PANEL: CREATOR
+Iptc.Application2.BylineTitle                0x0055 String     32  IPTC CONTACT PANEL: CREATOR"S JO
+Iptc.Application2.Credit                     0x006e String     27  IPTC STATUS PANEL: PROVIDER
+Iptc.Application2.Source                     0x0073 String     25  IPTC STATUS PANEL: SOURCE
+Iptc.Application2.ObjectName                 0x0005 String     24  IPTC STATUS PANEL: TITLE
+Iptc.Application2.DateCreated                0x0037 Date        8  2007-11-19
+Iptc.Application2.City                       0x005a String     22  IPTC IMAGE PANEL: CITY
+Iptc.Application2.ProvinceState              0x005f String     32  IPTC IMAGE PANEL: STATE/PROVINCE
+Iptc.Application2.CountryName                0x0065 String     25  IPTC IMAGE PANEL: COUNTRY
+Iptc.Application2.TransmissionReference      0x0067 String     24  IPTC STATUS PANEL: TITLE
+Iptc.Application2.Keywords                   0x0019 String     19  IPTC CONTENT PANEL:
+Iptc.Application2.Keywords                   0x0019 String      8  KEYWORDS
+Iptc.Application2.Copyright                  0x0074 String     35  IPTC STATUS PANEL: COPYRIGHT NOTICE
+Caught Exiv2 exception 'C:\Users\PC\Desktop\Grafika_komputerowa_projekt\focie\ok.jpg: No IPTC data found in the file'

@@ -4,8 +4,7 @@ project (main)
 
 set(wxWidgets_ROOT_DIR "C:/wxWidgets-3.2.2.1")
 find_package(wxWidgets REQUIRED COMPONENTS net core base)
-# find_package(exiv2 REQUIRED)
-# find_package(exiv2 REQUIRED CONFIG NAMES exiv2)
+
 
 
 
@@ -38,7 +37,7 @@ file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
 add_executable(${PROJECT_NAME} ${PROJECT_NAME}.cpp ${SOURCES})
 target_link_libraries(${PROJECT_NAME} PRIVATE ${wxWidgets_LIBRARIES})
-# target_link_libraries(exifprint PRIVATE exiv2lib)
+
 
 
 
