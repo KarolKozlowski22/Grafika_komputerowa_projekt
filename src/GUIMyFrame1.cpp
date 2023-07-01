@@ -61,36 +61,7 @@ void GUIMyFrame1::DrawBitmap(wxDC& dc) {
     dc.DrawBitmap(bitmapphoto, 0, 0, true);
 }
 
-void GUIMyFrame1::AddExif(wxString & filename){
-    std::ifstream file2(filename.mb_str(), std::ios::binary);
-    std::stringstream ss;
-    TinyEXIF::EXIFInfo imageEXIF(file2);
-    if (imageEXIF.Fields) {
-        ss << "Date Taken " << imageEXIF.DateTimeOriginal << std::endl
-        << "Camera Model " << imageEXIF.Make << " - " << imageEXIF.Model << std::endl
-        << "Focal Length " << imageEXIF.FocalLength << " mm" << std::endl
-        << "Aperture " << imageEXIF.ApertureValue << std::endl
-        << "Exposure Time " << imageEXIF.ExposureTime << std::endl
-        << "ISO " << imageEXIF.ISOSpeedRatings << std::endl
-        << "Software " << imageEXIF.Software << std::endl
-        << "Bits Per Sample " << imageEXIF.BitsPerSample << std::endl
-        << "Exposure Bias " << imageEXIF.ExposureBiasValue << std::endl
-        << "Flash " << imageEXIF.Flash << std::endl
-        << "Metering Mode " << imageEXIF.MeteringMode << std::endl
-        << "X Resolution " << imageEXIF.XResolution << std::endl
-        << "Y Resolution " << imageEXIF.YResolution << std::endl
-        << "Orientation " << imageEXIF.Orientation << std::endl
-        << "Exposure Program " << imageEXIF.ExposureProgram << std::endl
-        << "Light Source " << imageEXIF.LightSource << std::endl
-        << "GPS Latitude " << imageEXIF.GeoLocation.Latitude << std::endl
-        << "GPS Longitude " << imageEXIF.GeoLocation.Longitude << std::endl
-        << "GPS Altitude " << imageEXIF.GeoLocation.Altitude << std::endl;
-    }
-    else
-        ss << "No EXIF information in this image." << std::endl;
-    file2.close();
-    s=wxString(ss.str());
-}
+
 
 void GUIMyFrame1::m_button1_click( wxCommandEvent& event ) {
 

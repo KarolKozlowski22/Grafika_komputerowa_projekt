@@ -676,13 +676,6 @@ CMakeFiles/main.dir/main.cpp.obj: C:/Users/PC/Desktop/Grafika_komputerowa_projek
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
   C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/GUIMyFrame1.h \
   C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/GUI.h \
-  C:/wxWidgets-3.2.2.1/include/wx/artprov.h \
-  C:/wxWidgets-3.2.2.1/include/wx/xrc/xmlres.h \
-  C:/wxWidgets-3.2.2.1/include/wx/filesys.h \
-  C:/wxWidgets-3.2.2.1/include/wx/filename.h \
-  C:/wxWidgets-3.2.2.1/include/wx/file.h \
-  C:/wxWidgets-3.2.2.1/include/wx/convauto.h \
-  C:/wxWidgets-3.2.2.1/include/wx/xrc/xmlreshandler.h \
   C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/TinyEXIF.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/fstream \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/codecvt.h \
@@ -1035,8 +1028,9 @@ CMakeFiles/main.dir/src/GUI.cpp.obj: C:/Users/PC/Desktop/Grafika_komputerowa_pro
 CMakeFiles/main.dir/src/GUIMyFrame1.cpp.obj: C:/Users/PC/Desktop/Grafika_komputerowa_projekt/src/GUIMyFrame1.cpp \
   C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/GUIMyFrame1.h \
   C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/GUI.h \
-  C:/wxWidgets-3.2.2.1/include/wx/artprov.h \
-  C:/wxWidgets-3.2.2.1/include/wx/string.h \
+  C:/wxWidgets-3.2.2.1/include/wx/panel.h \
+  C:/wxWidgets-3.2.2.1/include/wx/window.h \
+  C:/wxWidgets-3.2.2.1/include/wx/event.h \
   C:/wxWidgets-3.2.2.1/include/wx/defs.h \
   C:/wxWidgets-3.2.2.1/include/wx/platform.h \
   C:/wxWidgets-3.2.2.1/include/wx/compiler.h \
@@ -1090,6 +1084,9 @@ CMakeFiles/main.dir/src/GUIMyFrame1.cpp.obj: C:/Users/PC/Desktop/Grafika_kompute
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/tchar.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/tchar_s.h \
   C:/wxWidgets-3.2.2.1/include/wx/features.h \
+  C:/wxWidgets-3.2.2.1/include/wx/object.h \
+  C:/wxWidgets-3.2.2.1/include/wx/memory.h \
+  C:/wxWidgets-3.2.2.1/include/wx/string.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/stdio.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdarg.h \
@@ -1237,22 +1234,12 @@ CMakeFiles/main.dir/src/GUIMyFrame1.cpp.obj: C:/Users/PC/Desktop/Grafika_kompute
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/execution_defs.h \
   C:/wxWidgets-3.2.2.1/include/wx/stringops.h \
   C:/wxWidgets-3.2.2.1/include/wx/iosfwrap.h \
-  C:/wxWidgets-3.2.2.1/include/wx/bitmap.h \
-  C:/wxWidgets-3.2.2.1/include/wx/gdicmn.h \
-  C:/wxWidgets-3.2.2.1/include/wx/list.h \
-  C:/wxWidgets-3.2.2.1/include/wx/object.h \
-  C:/wxWidgets-3.2.2.1/include/wx/memory.h \
   C:/wxWidgets-3.2.2.1/include/wx/msgout.h \
   C:/wxWidgets-3.2.2.1/include/wx/xti.h \
   C:/wxWidgets-3.2.2.1/include/wx/rtti.h \
   C:/wxWidgets-3.2.2.1/include/wx/flags.h \
   C:/wxWidgets-3.2.2.1/include/wx/xti2.h \
-  C:/wxWidgets-3.2.2.1/include/wx/vector.h \
-  C:/wxWidgets-3.2.2.1/include/wx/scopeguard.h \
-  C:/wxWidgets-3.2.2.1/include/wx/except.h \
-  C:/wxWidgets-3.2.2.1/include/wx/meta/movable.h \
-  C:/wxWidgets-3.2.2.1/include/wx/meta/pod.h \
-  C:/wxWidgets-3.2.2.1/include/wx/meta/if.h \
+  C:/wxWidgets-3.2.2.1/include/wx/clntdata.h \
   C:/wxWidgets-3.2.2.1/include/wx/hashmap.h \
   C:/wxWidgets-3.2.2.1/include/wx/wxcrt.h \
   C:/wxWidgets-3.2.2.1/include/wx/math.h \
@@ -1272,25 +1259,71 @@ CMakeFiles/main.dir/src/GUIMyFrame1.cpp.obj: C:/Users/PC/Desktop/Grafika_kompute
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/poly_hermite.tcc \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/poly_laguerre.tcc \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/tr1/riemann_zeta.tcc \
-  C:/wxWidgets-3.2.2.1/include/wx/colour.h \
+  C:/wxWidgets-3.2.2.1/include/wx/gdicmn.h \
+  C:/wxWidgets-3.2.2.1/include/wx/list.h \
+  C:/wxWidgets-3.2.2.1/include/wx/vector.h \
+  C:/wxWidgets-3.2.2.1/include/wx/scopeguard.h \
+  C:/wxWidgets-3.2.2.1/include/wx/except.h \
+  C:/wxWidgets-3.2.2.1/include/wx/meta/movable.h \
+  C:/wxWidgets-3.2.2.1/include/wx/meta/pod.h \
+  C:/wxWidgets-3.2.2.1/include/wx/meta/if.h \
+  C:/wxWidgets-3.2.2.1/include/wx/cursor.h \
   C:/wxWidgets-3.2.2.1/include/wx/gdiobj.h \
-  C:/wxWidgets-3.2.2.1/include/wx/variant.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/gdiimage.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/cursor.h \
+  C:/wxWidgets-3.2.2.1/include/wx/utils.h \
+  C:/wxWidgets-3.2.2.1/include/wx/filefn.h \
   C:/wxWidgets-3.2.2.1/include/wx/arrstr.h \
   C:/wxWidgets-3.2.2.1/include/wx/dynarray.h \
-  C:/wxWidgets-3.2.2.1/include/wx/longlong.h \
-  C:/wxWidgets-3.2.2.1/include/wx/datetime.h \
-  C:/wxWidgets-3.2.2.1/include/wx/anystr.h \
-  C:/wxWidgets-3.2.2.1/include/wx/any.h \
-  C:/wxWidgets-3.2.2.1/include/wx/typeinfo.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/colour.h \
-  C:/wxWidgets-3.2.2.1/include/wx/image.h \
-  C:/wxWidgets-3.2.2.1/include/wx/stream.h \
-  C:/wxWidgets-3.2.2.1/include/wx/filefn.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/sys/stat.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/fcntl.h \
+  C:/wxWidgets-3.2.2.1/include/wx/versioninfo.h \
+  C:/wxWidgets-3.2.2.1/include/wx/meta/implicitconversion.h \
+  C:/wxWidgets-3.2.2.1/include/wx/mousestate.h \
+  C:/wxWidgets-3.2.2.1/include/wx/kbdstate.h \
+  C:/wxWidgets-3.2.2.1/include/wx/longlong.h \
+  C:/wxWidgets-3.2.2.1/include/wx/platinfo.h \
+  C:/wxWidgets-3.2.2.1/include/wx/thread.h \
+  C:/wxWidgets-3.2.2.1/include/wx/tracker.h \
+  C:/wxWidgets-3.2.2.1/include/wx/typeinfo.h \
+  C:/wxWidgets-3.2.2.1/include/wx/any.h \
+  C:/wxWidgets-3.2.2.1/include/wx/datetime.h \
+  C:/wxWidgets-3.2.2.1/include/wx/anystr.h \
+  C:/wxWidgets-3.2.2.1/include/wx/variant.h \
+  C:/wxWidgets-3.2.2.1/include/wx/meta/convertible.h \
+  C:/wxWidgets-3.2.2.1/include/wx/meta/removeref.h \
+  C:/wxWidgets-3.2.2.1/include/wx/font.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/font.h \
+  C:/wxWidgets-3.2.2.1/include/wx/colour.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/colour.h \
+  C:/wxWidgets-3.2.2.1/include/wx/region.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/region.h \
+  C:/wxWidgets-3.2.2.1/include/wx/intl.h \
+  C:/wxWidgets-3.2.2.1/include/wx/localedefs.h \
+  C:/wxWidgets-3.2.2.1/include/wx/translation.h \
+  C:/wxWidgets-3.2.2.1/include/wx/language.h \
+  C:/wxWidgets-3.2.2.1/include/wx/scopedptr.h \
+  C:/wxWidgets-3.2.2.1/include/wx/checkeddelete.h \
+  C:/wxWidgets-3.2.2.1/include/wx/validate.h \
+  C:/wxWidgets-3.2.2.1/include/wx/windowid.h \
+  C:/wxWidgets-3.2.2.1/include/wx/palette.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/palette.h \
+  C:/wxWidgets-3.2.2.1/include/wx/accel.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/accel.h \
+  C:/wxWidgets-3.2.2.1/include/wx/access.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/ole/access.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/window.h \
+  C:/wxWidgets-3.2.2.1/include/wx/settings.h \
+  C:/wxWidgets-3.2.2.1/include/wx/containr.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/panel.h \
+  C:/wxWidgets-3.2.2.1/include/wx/button.h \
+  C:/wxWidgets-3.2.2.1/include/wx/anybutton.h \
+  C:/wxWidgets-3.2.2.1/include/wx/bmpbndl.h \
+  C:/wxWidgets-3.2.2.1/include/wx/bitmap.h \
+  C:/wxWidgets-3.2.2.1/include/wx/image.h \
+  C:/wxWidgets-3.2.2.1/include/wx/stream.h \
   C:/wxWidgets-3.2.2.1/include/wx/imagbmp.h \
   C:/wxWidgets-3.2.2.1/include/wx/imagpng.h \
-  C:/wxWidgets-3.2.2.1/include/wx/versioninfo.h \
   C:/wxWidgets-3.2.2.1/include/wx/imaggif.h \
   C:/wxWidgets-3.2.2.1/include/wx/imagpcx.h \
   C:/wxWidgets-3.2.2.1/include/wx/imagjpeg.h \
@@ -1300,59 +1333,6 @@ CMakeFiles/main.dir/src/GUIMyFrame1.cpp.obj: C:/Users/PC/Desktop/Grafika_kompute
   C:/wxWidgets-3.2.2.1/include/wx/imagxpm.h \
   C:/wxWidgets-3.2.2.1/include/wx/imagiff.h \
   C:/wxWidgets-3.2.2.1/include/wx/msw/bitmap.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/gdiimage.h \
-  C:/wxWidgets-3.2.2.1/include/wx/palette.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/palette.h \
-  C:/wxWidgets-3.2.2.1/include/wx/icon.h \
-  C:/wxWidgets-3.2.2.1/include/wx/iconloc.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/icon.h \
-  C:/wxWidgets-3.2.2.1/include/wx/iconbndl.h \
-  C:/wxWidgets-3.2.2.1/include/wx/bmpbndl.h \
-  C:/wxWidgets-3.2.2.1/include/wx/xrc/xmlres.h \
-  C:/wxWidgets-3.2.2.1/include/wx/filesys.h \
-  C:/wxWidgets-3.2.2.1/include/wx/filename.h \
-  C:/wxWidgets-3.2.2.1/include/wx/intl.h \
-  C:/wxWidgets-3.2.2.1/include/wx/localedefs.h \
-  C:/wxWidgets-3.2.2.1/include/wx/translation.h \
-  C:/wxWidgets-3.2.2.1/include/wx/language.h \
-  C:/wxWidgets-3.2.2.1/include/wx/scopedptr.h \
-  C:/wxWidgets-3.2.2.1/include/wx/checkeddelete.h \
-  C:/wxWidgets-3.2.2.1/include/wx/file.h \
-  C:/wxWidgets-3.2.2.1/include/wx/convauto.h \
-  C:/wxWidgets-3.2.2.1/include/wx/xrc/xmlreshandler.h \
-  C:/wxWidgets-3.2.2.1/include/wx/imaglist.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/imaglist.h \
-  C:/wxWidgets-3.2.2.1/include/wx/window.h \
-  C:/wxWidgets-3.2.2.1/include/wx/event.h \
-  C:/wxWidgets-3.2.2.1/include/wx/clntdata.h \
-  C:/wxWidgets-3.2.2.1/include/wx/cursor.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/cursor.h \
-  C:/wxWidgets-3.2.2.1/include/wx/utils.h \
-  C:/wxWidgets-3.2.2.1/include/wx/meta/implicitconversion.h \
-  C:/wxWidgets-3.2.2.1/include/wx/mousestate.h \
-  C:/wxWidgets-3.2.2.1/include/wx/kbdstate.h \
-  C:/wxWidgets-3.2.2.1/include/wx/platinfo.h \
-  C:/wxWidgets-3.2.2.1/include/wx/thread.h \
-  C:/wxWidgets-3.2.2.1/include/wx/tracker.h \
-  C:/wxWidgets-3.2.2.1/include/wx/meta/convertible.h \
-  C:/wxWidgets-3.2.2.1/include/wx/meta/removeref.h \
-  C:/wxWidgets-3.2.2.1/include/wx/font.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/font.h \
-  C:/wxWidgets-3.2.2.1/include/wx/region.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/region.h \
-  C:/wxWidgets-3.2.2.1/include/wx/validate.h \
-  C:/wxWidgets-3.2.2.1/include/wx/windowid.h \
-  C:/wxWidgets-3.2.2.1/include/wx/accel.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/accel.h \
-  C:/wxWidgets-3.2.2.1/include/wx/access.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/ole/access.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/window.h \
-  C:/wxWidgets-3.2.2.1/include/wx/settings.h \
-  C:/wxWidgets-3.2.2.1/include/wx/panel.h \
-  C:/wxWidgets-3.2.2.1/include/wx/containr.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/panel.h \
-  C:/wxWidgets-3.2.2.1/include/wx/button.h \
-  C:/wxWidgets-3.2.2.1/include/wx/anybutton.h \
   C:/wxWidgets-3.2.2.1/include/wx/control.h \
   C:/wxWidgets-3.2.2.1/include/wx/msw/control.h \
   C:/wxWidgets-3.2.2.1/include/wx/msw/anybutton.h \
@@ -1362,6 +1342,10 @@ CMakeFiles/main.dir/src/GUIMyFrame1.cpp.obj: C:/Users/PC/Desktop/Grafika_kompute
   C:/wxWidgets-3.2.2.1/include/wx/toplevel.h \
   C:/wxWidgets-3.2.2.1/include/wx/nonownedwnd.h \
   C:/wxWidgets-3.2.2.1/include/wx/msw/nonownedwnd.h \
+  C:/wxWidgets-3.2.2.1/include/wx/iconbndl.h \
+  C:/wxWidgets-3.2.2.1/include/wx/icon.h \
+  C:/wxWidgets-3.2.2.1/include/wx/iconloc.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/icon.h \
   C:/wxWidgets-3.2.2.1/include/wx/weakref.h \
   C:/wxWidgets-3.2.2.1/include/wx/meta/int2type.h \
   C:/wxWidgets-3.2.2.1/include/wx/msw/toplevel.h \
@@ -1391,7 +1375,20 @@ CMakeFiles/main.dir/src/GUIMyFrame1.cpp.obj: C:/Users/PC/Desktop/Grafika_kompute
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/fstream.tcc \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/sstream \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/sstream.tcc \
-  C:/wxWidgets-3.2.2.1/include/wx/filedlg.h \
+  C:/wxWidgets-3.2.2.1/include/wx/dcbuffer.h \
+  C:/wxWidgets-3.2.2.1/include/wx/dcmemory.h \
+  C:/wxWidgets-3.2.2.1/include/wx/dc.h \
+  C:/wxWidgets-3.2.2.1/include/wx/brush.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/brush.h \
+  C:/wxWidgets-3.2.2.1/include/wx/pen.h \
+  C:/wxWidgets-3.2.2.1/include/wx/peninfobase.h \
+  C:/wxWidgets-3.2.2.1/include/wx/msw/pen.h \
+  C:/wxWidgets-3.2.2.1/include/wx/affinematrix2d.h \
+  C:/wxWidgets-3.2.2.1/include/wx/affinematrix2dbase.h \
+  C:/wxWidgets-3.2.2.1/include/wx/geometry.h \
+  C:/wxWidgets-3.2.2.1/include/wx/dcclient.h \
+  C:/wxWidgets-3.2.2.1/include/wx/dir.h \
+  C:/wxWidgets-3.2.2.1/include/wx/dirdlg.h \
   C:/wxWidgets-3.2.2.1/include/wx/dialog.h \
   C:/wxWidgets-3.2.2.1/include/wx/sharedptr.h \
   C:/wxWidgets-3.2.2.1/include/wx/atomic.h \
@@ -1611,21 +1608,6 @@ CMakeFiles/main.dir/src/GUIMyFrame1.cpp.obj: C:/Users/PC/Desktop/Grafika_kompute
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/qos.h \
   C:/wxWidgets-3.2.2.1/include/wx/msw/dialog.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/filedlg.h \
-  C:/wxWidgets-3.2.2.1/include/wx/dcbuffer.h \
-  C:/wxWidgets-3.2.2.1/include/wx/dcmemory.h \
-  C:/wxWidgets-3.2.2.1/include/wx/dc.h \
-  C:/wxWidgets-3.2.2.1/include/wx/brush.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/brush.h \
-  C:/wxWidgets-3.2.2.1/include/wx/pen.h \
-  C:/wxWidgets-3.2.2.1/include/wx/peninfobase.h \
-  C:/wxWidgets-3.2.2.1/include/wx/msw/pen.h \
-  C:/wxWidgets-3.2.2.1/include/wx/affinematrix2d.h \
-  C:/wxWidgets-3.2.2.1/include/wx/affinematrix2dbase.h \
-  C:/wxWidgets-3.2.2.1/include/wx/geometry.h \
-  C:/wxWidgets-3.2.2.1/include/wx/dcclient.h \
-  C:/wxWidgets-3.2.2.1/include/wx/dir.h \
-  C:/wxWidgets-3.2.2.1/include/wx/dirdlg.h \
   C:/wxWidgets-3.2.2.1/include/wx/msw/dirdlg.h
 
 CMakeFiles/main.dir/src/TinyEXIF.cpp.obj: C:/Users/PC/Desktop/Grafika_komputerowa_projekt/src/TinyEXIF.cpp \
@@ -3249,14 +3231,6 @@ C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/backward/auto_ptr.h:
 
 C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/GUI.h:
 
-C:/wxWidgets-3.2.2.1/include/wx/filesys.h:
-
-C:/wxWidgets-3.2.2.1/include/wx/filename.h:
-
-C:/wxWidgets-3.2.2.1/include/wx/convauto.h:
-
-C:/wxWidgets-3.2.2.1/include/wx/xrc/xmlreshandler.h:
-
 C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/TinyEXIF.h:
 
 C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/codecvt.h:
@@ -3268,6 +3242,14 @@ C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/fstream.tcc:
 C:/wxWidgets-3.2.2.1/include/wx/dcbuffer.h:
 
 C:/wxWidgets-3.2.2.1/include/wx/dir.h:
+
+C:/wxWidgets-3.2.2.1/include/wx/filesys.h:
+
+C:/wxWidgets-3.2.2.1/include/wx/filename.h:
+
+C:/wxWidgets-3.2.2.1/include/wx/convauto.h:
+
+C:/wxWidgets-3.2.2.1/include/wx/xrc/xmlreshandler.h:
 
 C:/Users/PC/Desktop/Grafika_komputerowa_projekt/src/GUIMyFrame1.cpp:
 

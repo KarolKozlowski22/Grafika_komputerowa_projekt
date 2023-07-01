@@ -674,13 +674,6 @@ CMakeFiles/main.dir/main.cpp.obj: \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/pstl/glue_memory_defs.h \
  C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/GUIMyFrame1.h \
  C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/GUI.h \
- C:/wxWidgets-3.2.2.1/include/wx/artprov.h \
- C:/wxWidgets-3.2.2.1/include/wx/xrc/xmlres.h \
- C:/wxWidgets-3.2.2.1/include/wx/filesys.h \
- C:/wxWidgets-3.2.2.1/include/wx/filename.h \
- C:/wxWidgets-3.2.2.1/include/wx/file.h \
- C:/wxWidgets-3.2.2.1/include/wx/convauto.h \
- C:/wxWidgets-3.2.2.1/include/wx/xrc/xmlreshandler.h \
  C:/Users/PC/Desktop/Grafika_komputerowa_projekt/include/TinyEXIF.h \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/fstream \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/bits/codecvt.h \
