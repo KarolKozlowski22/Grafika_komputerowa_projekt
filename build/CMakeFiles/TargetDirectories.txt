@@ -1,3 +1,0 @@
-C:/Users/PC/Desktop/Grafika_komputerowa_projekt/build/CMakeFiles/main.dir
-C:/Users/PC/Desktop/Grafika_komputerowa_projekt/build/CMakeFiles/edit_cache.dir
-C:/Users/PC/Desktop/Grafika_komputerowa_projekt/build/CMakeFiles/rebuild_cache.dir
